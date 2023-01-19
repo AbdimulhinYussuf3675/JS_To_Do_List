@@ -214,8 +214,6 @@ Feel free to check the [issues page](../../issues/).
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
 I would like to thank to microverse and my colleges at large who helped me on accomplishing this project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
