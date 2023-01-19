@@ -11,4 +11,3 @@ createTodoForm.addEventListener('submit', (e) => {
   renderTodos();
   createTodoForm.reset();
 });
-
