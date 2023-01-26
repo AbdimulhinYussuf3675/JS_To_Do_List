@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #eee;
+  background: rgb(99, 80, 80);
   font-family: 'Poppins', sans-serif;
   color: gray;
 }
@@ -32,9 +32,14 @@ body {
   font-size: 1em;
 }
 
+#restart {
+  color: blue;
+}
+
 svg {
   align-self: center;
   cursor: pointer;
+  color: green;
 }
 
 .checkbox {

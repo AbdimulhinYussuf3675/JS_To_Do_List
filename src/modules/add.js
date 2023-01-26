@@ -1,21 +1,22 @@
-/* eslint import/no-cycle: [2, { maxDepth: 1 }] */
 import saveTodo from './save.js';
 import getTodos from './getTask.js';
+import renderTodos from './todo.js';
 
-const validated = ({ description }, todos) => {
-  description = description.value.trim();
+const validated = (addTodoForm, todos) => {
+  const description = addTodoForm.children[0].value.trim();
   if (description.length > 0) {
     return { description, completed: false, index: todos.length + 1 };
   }
   return null;
 };
 
-const addTodo = (createTodoForm) => {
+const addTodo = (addTodoForm) => {
   const todos = getTodos();
-  const todo = validated(createTodoForm, todos);
+  const todo = validated(addTodoForm, todos);
   todos.push(todo);
   if (todo === null) return;
   saveTodo(todos);
+  renderTodos();
 };
 
 export default addTodo;
