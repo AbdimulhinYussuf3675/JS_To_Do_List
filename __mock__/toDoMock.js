@@ -1,5 +1,5 @@
 const todoMock = (value) => {
-    document.body.innerHTML = `
+  document.body.innerHTML = `
      <div class="wrapper">
      <div class="todo-title">
       <h1>Today's To Do</h1>
@@ -23,5 +23,5 @@ const todoMock = (value) => {
      </div>
     </div>
      `;
-  };
-  export default todoMock;
+};
+export default todoMock;

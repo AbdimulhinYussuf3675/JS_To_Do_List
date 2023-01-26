@@ -1,6 +1,6 @@
 import clearCompleted from './complete';
 import markCompletedTodo from './clear';
-import deleteTodo from './delete';
+import { deleteTodo } from './delete';
 import getTodos from './getTask';
 import updateTodo from './edit';
 
