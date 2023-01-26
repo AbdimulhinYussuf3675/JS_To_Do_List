@@ -2,23 +2,32 @@ import renderTodos from './todo';
 import saveTodo from './save';
 import getTodos from './getTask';
 
-const markCompletedTodo = () => {
-  const ckeckboxes = document.querySelectorAll('.checkbox');
-  ckeckboxes.forEach((checkbox) => {
-    checkbox.addEventListener('click', () => {
-      const index = Number(checkbox.id);
-      const todos = getTodos();
+const completedTest = (id) => {
+  const index = Number(id);
+  const todos = getTodos();
 
-      if (todos[index - 1].completed) {
-        todos[index - 1].completed = false;
-      } else {
-        todos[index - 1].completed = true;
-      }
+  if(todos[index -1].completed) {
+    todos[index - 1].completed = false;
+  }else {
+    todos[index - 1].completed = true;
+  };
 
-      saveTodo(todos);
-      renderTodos();
-    });
-  });
+  saveTodo(todos);
+  renderTodos();
 };
 
-export default markCompletedTodo;
+const markTodo = ({ target }) => {
+  completedTest(target.id);
+};
+
+const completedListener = (checkbox) => {
+  checkbox.addEventListener('click', markTodo);
+};
+
+const checkMarkListener = () => {
+  const checkboxes = document.querySelectorAll('.checkbox');
+  checkboxes.forEach(completedListener);
+};
+
+export default checkMarkListener;
+export {completedTest};
