@@ -1,6 +1,6 @@
 import clearCompleted from './complete';
 import markCompletedTodo from './clear';
-import { deleteTodo } from './delete';
+import deleteListener from './delete';
 import getTodos from './getTask';
 import updateTodo from './edit';
 
@@ -23,7 +23,7 @@ const renderTodos = () => {
     )).join('');
   todoListContainer.innerHTML = `<ul> ${todosLists} </ul>`;
   updateTodo();
-  deleteTodo();
+  deleteListener();
   markCompletedTodo();
   clearCompleted();
 };
