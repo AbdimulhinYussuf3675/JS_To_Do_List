@@ -2,7 +2,6 @@ import renderTodos from './todo.js';
 import saveTodo from './save.js';
 import getTodos from './getTask.js';
 
-
 const deleteTodo = (id) => {
   const index = id;
   const todos = getTodos().filter((todo) => todo.index !== Number(index))

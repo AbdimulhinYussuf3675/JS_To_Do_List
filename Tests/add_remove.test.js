@@ -1,11 +1,11 @@
-const addTodo = require("../src/modules/add");
-describe("tests functions responsible for adding todos", () => {
+const addTodo = require('../src/modules/add');
 
-  test("check if addTodo exists", () => {
+describe('tests functions responsible for adding todos', () => {
+  test('check if addTodo exists', () => {
     expect(addTodo).toBeDefined();
   });
 
-  test("check if function adds todo", () => {
-    
-  })
+  test('check if function adds todo', () => {
+
+  });
 });
