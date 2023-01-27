@@ -1,10 +1,10 @@
 import checkMarkListener from './clear';
 import deleteListener from './delete';
 import getTodos from './getTask';
-import editTest from '../edit';
+import checkUpdateEvent from './edit';
 
 const eventListeners = () => {
-  editTest();
+  checkUpdateEvent();
   deleteListener();
   checkMarkListener();
 };
