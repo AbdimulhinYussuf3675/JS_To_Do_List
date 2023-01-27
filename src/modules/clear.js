@@ -1,6 +1,6 @@
-import renderTodos from "./todo";
-import saveTodo from "./save";
-import getTodos from "./getTask";
+import renderTodos from './todo';
+import saveTodo from './save';
+import getTodos from './getTask';
 
 const completedTest = (id) => {
   const index = id;
@@ -21,11 +21,11 @@ const markTodo = ({ target }) => {
 };
 
 const completedListener = (checkbox) => {
-  checkbox.addEventListener("click", markTodo);
+  checkbox.addEventListener('click', markTodo);
 };
 
 const checkMarkListener = () => {
-  const checkboxes = document.querySelectorAll(".checkbox");
+  const checkboxes = document.querySelectorAll('.checkbox');
   checkboxes.forEach(completedListener);
 };
 

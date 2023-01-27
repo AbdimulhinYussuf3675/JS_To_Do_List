@@ -1,7 +1,7 @@
 import checkMarkListener from './clear';
 import deleteListener from './delete';
 import getTodos from './getTask';
-import  editTest  from './edit';
+import editTest from '../edit';
 
 const eventListeners = () => {
   editTest();

@@ -1,6 +1,6 @@
-import renderTodos from "./todo";
-import saveTodo from "./save";
-import getTodos from "./getTask";
+import renderTodos from './todo';
+import saveTodo from './save';
+import getTodos from './getTask';
 
 const clearCompleted = () => {
   let todos = getTodos();

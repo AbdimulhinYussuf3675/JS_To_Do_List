@@ -5,11 +5,11 @@ import clearCompleted from './modules/complete';
 
 const addTodoForm = document.querySelector('#todo-form');
 const clearTodo = document.querySelector('.complete-clear');
-const addIcon = document.querySelector('#addbtn')
+const addIcon = document.querySelector('#addbtn');
 
-clearTodo.addEventListener('click', () =>{
+clearTodo.addEventListener('click', () => {
   clearCompleted();
-})
+});
 renderTodos();
 
 addIcon.addEventListener('click', () => {

@@ -25,18 +25,18 @@ const editInterface = (target) => {
   todoContentContiner.appendChild(form);
 };
 
-const verify = value => {
+const verify = (value) => {
   const description = value.trim();
   if (description.length > 0) {
-    return {description, completed: false, index:1};
+    return { description, completed: false, index: 1 };
   }
-  return null
+  return null;
 };
 
 const editTest = (id, description) => {
-  const todos = getTodos()
+  const todos = getTodos();
   const editedTodo = verify(description);
-  if(editedTodo === null) return;
+  if (editedTodo === null) return;
   const index = id;
   todos[index - 1].description = editedTodo.description;
   saveTodo(todos);
@@ -53,7 +53,7 @@ const updateTodoFormListener = ({ target }) => {
   const updateForm = document.querySelector('.todo-item-form');
   updateForm.menuIcon = target;
   updateForm.addEventListener('submit', update);
-}
+};
 
 const editInterfaceListener = (menuIcon) => {
   menuIcon.addEventListener('click', updateTodoFormListener);
@@ -61,8 +61,8 @@ const editInterfaceListener = (menuIcon) => {
 
 const checkUpdateEvent = () => {
   const menuIcon = document.querySelectorAll('.menuIcon');
-  menuIcon.forEach(editInterfaceListener)
-}
+  menuIcon.forEach(editInterfaceListener);
+};
 
 export default checkUpdateEvent;
 export { editTest };
