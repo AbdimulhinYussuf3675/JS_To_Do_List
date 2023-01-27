@@ -13,7 +13,7 @@ const renderTodos = () => {
   const todoListContainer = document.querySelector('.todo-list');
   const todosLists = getTodos().sort((a, b) => a.index - b.index)
     .map(({ completed, description, index }) => (
-      ` <li class="todo-li">
+      ` <li class="todo-li" id="${index}">
         <div class="list-item">
           <input id="${index}" class="checkbox" type="checkbox" ${completed ? 'checked' : ''}>
           <p class="${completed ? 'completed' : ''}">${description}</p>
@@ -26,8 +26,8 @@ const renderTodos = () => {
         </svg>
        </li>`
     )).join('');
-    todoListContainer.innerHTML = `<ul>${todosLists}</ul>`;
-    eventListeners();
+  todoListContainer.innerHTML = `<ul> ${todosLists} </ul>`;
+  eventListeners();
 };
 
 export default renderTodos;
