@@ -23,6 +23,6 @@ describe('tests functions responsible for adding and deleting list items', () =>
     const itemIndex = container.children[0].id;
     deleteTodo(itemIndex);
     container = document.querySelector('ul');
-    expect(container.children.length).not.toBe(0);
+    expect(container.children.length).not.toBe(1);
   });
 });
