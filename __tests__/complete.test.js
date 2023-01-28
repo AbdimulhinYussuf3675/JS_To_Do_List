@@ -1,14 +1,11 @@
 /**
  * @jest-environment jsdom
  */
+import { completedTest } from '../src/modules/clear';
 import addTodo from '../src/modules/add';
-import { deleteTodo } from '../src/modules/delete';
 import todoMock from '../__mock__/toDoMock';
 
-describe('tests functions responsible for adding and deleting list items', () => {
-  test('check if addTodo exists', () => {
-    expect(addTodo).toBeDefined();
-  });
+describe('tests functions responsible for marking completed list from items', () => {
   test('Add new todo', () => {
     localStorage.clear();
     todoMock('Solve DSA challeges');
@@ -18,11 +15,11 @@ describe('tests functions responsible for adding and deleting list items', () =>
     expect(list.children.length).toBe(1);
   });
 
-  test('Deleting item from the list', () => {
+  test('check if todo is marked compleated', () => {
     let container = document.querySelector('ul');
-    const itemIndex = container.children[0].id;
-    deleteTodo(itemIndex);
+    const item = container.children[0].id;
+    completedTest(item);
     container = document.querySelector('ul');
-    expect(container.children.length).not.toBe(1);
+    expect(container.children[0].querySelector('input').checked).toBe(true);
   });
 });

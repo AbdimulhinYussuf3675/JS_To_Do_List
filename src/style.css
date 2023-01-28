@@ -72,12 +72,12 @@ svg {
 }
 
 .todo-title,
-.todo-clear,
+.complete-clear,
 .todo-input {
   padding-block: 13px;
 }
 
-.todo-clear {
+.complete-clear {
   background-color: #eee;
   color: gray;
   text-align: center;
